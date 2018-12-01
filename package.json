@@ -1,9 +1,10 @@
 {
-  "name": "blockchain-voices",
+  "name": "my-app2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ipfs": "0.33.1",
+    "ipfs-api": "26.1.2",
+    "ipfs-http-client": "27.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
@@ -22,5 +23,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-autocomplete-cli": "0.0.3"
+  }
 }
