@@ -11,7 +11,8 @@ class FileInput extends Component {
     this.state = {
       fileName: '',
       files: [],
-      disableButton: false
+      disableButton: false,
+      showSuccessMessage: false
     };
   }
 
@@ -28,6 +29,13 @@ class FileInput extends Component {
     this.setState({disableButton: !this.state.disableButton});
   }
 
+  finishUpload() {
+    this.setState({
+      disableButton: false,
+      showSuccessMessage: true
+    });
+  }
+
   render() {
     return (
       <div className="input-group mb-3 d-flex justify-content-center">
@@ -39,7 +47,7 @@ class FileInput extends Component {
                   return;
                 }
                 this.changeButtonState();
-                onFileUpload(this.state.files, this.changeButtonState.bind(this));
+                onFileUpload(this.state.files, this.finishUpload.bind(this));
               }} disabled={this.state.disableButton}>
               Button
             </button>
@@ -54,6 +62,13 @@ class FileInput extends Component {
           <label className="custom-file-label">
             <h3>{ this.state.fileName !== '' ? this.state.fileName : "Upload your video" }</h3>
           </label>
+        </div>
+        <div>
+          <p>
+            { this.state.showSuccessMessage ?
+            'Your video was successfully uploaded! It will remain pending of approval' : ''
+            }
+          </p>
         </div>
         {/* <input type="file"
             id="avatar" name="avatar"

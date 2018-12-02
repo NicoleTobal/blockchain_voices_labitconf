@@ -17,3 +17,15 @@ export const uploadFileIPFS = (name, fileBuffer, changeButtonState) => {
       }
     );
 };
+
+export const showApprovedFiles = () => {
+  ipfs.name.resolve('/ipns/' + process.env.IPFS_FILES_KEY, (err, path) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    ipfs.ls(path, (err, files) => {
+      console.log(files);
+    });
+  });
+};

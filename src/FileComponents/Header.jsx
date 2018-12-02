@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import '../App.css';
 //import { ipfs } from '../utils/ipfsHelper';
 //import { onFileUpload } from '../utils/fileHelper';
+import { login } from '../utils/apiRequest';
 import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 
 class Header extends Component {
@@ -9,8 +10,20 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
+      username: '',
+      password: ''
     };
+  }
+
+  login() {
+    login(this.state.username, this.state.password).then((err, res) => {
+      if (err) {
+        console.log(err);
+      } else {
+        sessionStorage.setItem('AUTH_TOKEN', res.data.token);
+      }
+    })
   }
 
   toggle() {

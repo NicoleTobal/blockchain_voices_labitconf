@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { showApprovedFiles } from '../utils/ipfsHelper';
 //import '../App.css';
 //import { ipfs } from '../utils/ipfsHelper';
 //import { onFileUpload } from '../utils/fileHelper';
@@ -8,6 +9,10 @@ class Highlights extends Component {
   // constructor(props) {
   //   super(props);
   // }
+
+  componentDidMount() {
+    showApprovedFiles();
+  }
 
   render() {
     return (
