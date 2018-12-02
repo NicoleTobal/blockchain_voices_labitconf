@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { onFileUpload } from '../utils/fileHelper';
-// import { ipfs } from '../utils/ipfsHelper';
 //import { onFileUpload } from '../utils/fileHelper';
 
 class FileInput extends Component {
@@ -14,15 +13,6 @@ class FileInput extends Component {
       disableButton: false,
       showSuccessMessage: false
     };
-  }
-
-  componentWillMount() {
-    // ipfs.ls('QmaYJhArZRAoec7eRpKN1c5tcXbF5ESmGMLrdnibTKn8To', (err, files) => {
-    //   console.log(files);
-    // });
-    // ipfs.ls('QmVAE7TWRgdaJkfhuKatw3jUNEFKfesHxBqyrwoZdgs1AC', (err, files) => {
-    //   console.log(files);
-    // });
   }
 
   changeButtonState() {
@@ -70,15 +60,6 @@ class FileInput extends Component {
             }
           </p>
         </div>
-        {/* <input type="file"
-            id="avatar" name="avatar"
-            onChange={onFileUpload}/> */}
-        {/* <iframe width="420" height="315"
-          src="https://gateway.ipfs.io/ipfs/QmPgKRmjrdqxaxSzACsb16hqsqT96CReUmEhadoHKwhHBj">
-        </iframe>
-        <iframe width="420" height="315"
-          src="https://gateway.ipfs.io/ipfs/QmdDnG6bZHUZjVS9aBNNAJjZhtqmLrEpyc8hLNCe79epRH">
-        </iframe> */}
       </div>
     );
   }

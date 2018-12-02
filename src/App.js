@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{marginTop: "20%"}} >
+      <div>
         <Router>
           <div>
             <Route path="/" exact component={this.renderMainComponent(() => <Home />)} />

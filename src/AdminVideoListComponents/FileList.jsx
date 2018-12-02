@@ -32,6 +32,15 @@ class FileList extends Component {
   render() {
     return (
       <div className="">
+        <div id="landing-page-title" className="container-fluid">
+          <div className="row">
+            <div id="title-landing" className="col-md-12 mx-auto">
+              <h1>
+                Files List
+              </h1>
+            </div>
+          </div>
+        </div>
         <BootstrapTable  data={ this.state.videos } striped={true} hover={true}>
           <TableHeaderColumn dataField="name" isKey={true} 
             dataFormat={(name, video) => <VideoPlayer name={name} hash={video.hash}/>}>

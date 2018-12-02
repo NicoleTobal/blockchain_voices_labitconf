@@ -1,17 +1,7 @@
 import React, { Component } from 'react';
-import { showApprovedFiles } from '../utils/ipfsHelper';
-//import '../App.css';
-//import { ipfs } from '../utils/ipfsHelper';
-//import { onFileUpload } from '../utils/fileHelper';
+import '../App.css';
 
 class Highlights extends Component {
-
-  // constructor(props) {
-  //   super(props);
-  // }
-
-  componentDidMount() {
-  }
 
   render() {
     return (
@@ -25,10 +15,10 @@ class Highlights extends Component {
 
         <div className="container-fluid container-highlights">
           <div className="row" id="highlights-videos-1">
-            <div className="col-6 col-md-6 embed-responsive embed-responsive-16by9" id="highlights-center-big">
+            <div className="col-md-6 embed-responsive embed-responsive-16by9" id="highlights-center-big">
               <iframe title="0" src="https://www.youtube-nocookie.com/embed/SSo_EIwHSd4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
-            <div className="col-6 col-md-6 embed-responsive embed-responsive-16by9" id="highlights-center-big">
+            <div className="col-md-6 embed-responsive embed-responsive-16by9" id="highlights-center-big">
               <iframe title="1" src="https://www.youtube-nocookie.com/embed/MhLdsJo_IRM" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </div>
@@ -38,6 +28,7 @@ class Highlights extends Component {
           <div className="row">
             <div className="col-6 col-md-4 embed-responsive embed-responsive-16by9" id="highlights-center-big"><iframe src="https://www.youtube-nocookie.com/embed/SSo_EIwHSd4" title="2" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
             <div className="col-6 col-md-4 embed-responsive embed-responsive-16by9" id="highlights-center-big"><iframe src="https://www.youtube-nocookie.com/embed/MhLdsJo_IRM" title="3" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
+            <div className="col-6 col-md-4 embed-responsive embed-responsive-16by9" id="highlights-center-big"><iframe src="https://www.youtube-nocookie.com/embed/MhLdsJo_IRM" title="4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
             <div className="col-6 col-md-4 embed-responsive embed-responsive-16by9" id="highlights-center-big"><iframe src="https://www.youtube-nocookie.com/embed/MhLdsJo_IRM" title="4" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></div>
           </div>
         </div>

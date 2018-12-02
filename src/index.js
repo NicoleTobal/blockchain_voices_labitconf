@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import FileInput from './FileComponents/FileInput';
+import Highlights from './FileComponents/Highlights';
+import AllFiles from './FileComponents/AllFiles';
+import Header from './FileComponents/Header';
+import FileUploadMenu from './FileComponents/FileUploadMenu';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

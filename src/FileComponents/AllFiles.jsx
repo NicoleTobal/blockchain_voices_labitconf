@@ -36,7 +36,7 @@ class AllFiles extends Component {
       <div className="container-fluid" key={rowIndex}>
         <div className="row">
           {videoRow.map((video, videoIndex) => (
-            <div key={videoIndex} className="col-md-2 embed-responsive embed-responsive-16by9" id="categories-videos">
+            <div key={videoIndex} className="col-6 col-md-2 embed-responsive embed-responsive-16by9" id="categories-videos">
               {renderApprovedFile(video)}
             </div>
           ))}
