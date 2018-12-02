@@ -11,7 +11,6 @@ class Highlights extends Component {
   // }
 
   componentDidMount() {
-    showApprovedFiles();
   }
 
   render() {

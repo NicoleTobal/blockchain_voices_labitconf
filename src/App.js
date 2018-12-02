@@ -14,14 +14,23 @@ class App extends Component {
     return component;
   }
 
+  renderMainComponent(getComponent) {
+    return () => (
+      <div>
+        <Header />
+        {getComponent()}
+      </div>
+    )
+  }
+
   render() {
     return (
       <div style={{marginTop: "20%"}} >
-        <Header />
         <Router>
           <div>
-            <Route path="/" exact component={Home} />
-            <Route path="/adminVideoList" component={this.renderAdminComponent(FileList)} />
+            <Route path="/" exact component={this.renderMainComponent(() => <Home />)} />
+            <Route path="/adminVideoList" component={this.renderAdminComponent(
+              this.renderMainComponent(() => <FileList />))} />
           </div>
         </Router>
       </div>
