@@ -3,7 +3,7 @@ import './App.css';
 import Header from './FileComponents/Header';
 import Home from './FileComponents/Home';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import FileList from './AdminVideoList/FileList';
+import FileList from './AdminVideoListComponents/FileList';
 
 class App extends Component {
 

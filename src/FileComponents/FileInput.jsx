@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
-import { ipfs } from '../utils/ipfsHelper';
+import { onFileUpload } from '../utils/fileHelper';
+// import { ipfs } from '../utils/ipfsHelper';
 //import { onFileUpload } from '../utils/fileHelper';
 
 class FileInput extends Component {
@@ -9,24 +10,39 @@ class FileInput extends Component {
     super(props);
     this.state = {
       fileName: '',
-      files: []
+      files: [],
+      disableButton: false
     };
   }
 
   componentWillMount() {
-    ipfs.ls('QmaYJhArZRAoec7eRpKN1c5tcXbF5ESmGMLrdnibTKn8To', (err, files) => {
-      console.log(files);
-    });
-    ipfs.ls('QmVAE7TWRgdaJkfhuKatw3jUNEFKfesHxBqyrwoZdgs1AC', (err, files) => {
-      console.log(files);
-    });
+    // ipfs.ls('QmaYJhArZRAoec7eRpKN1c5tcXbF5ESmGMLrdnibTKn8To', (err, files) => {
+    //   console.log(files);
+    // });
+    // ipfs.ls('QmVAE7TWRgdaJkfhuKatw3jUNEFKfesHxBqyrwoZdgs1AC', (err, files) => {
+    //   console.log(files);
+    // });
+  }
+
+  changeButtonState() {
+    this.setState({disableButton: !this.state.disableButton});
   }
 
   render() {
     return (
       <div className="input-group mb-3 d-flex justify-content-center">
         <div className="input-group-prepend">
-            <button className="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+            <button className="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03"
+              onClick={() => {
+                if (this.state.files.length === 0) {
+                  console.log('Debe ingresar un video');
+                  return;
+                }
+                this.changeButtonState();
+                onFileUpload(this.state.files, this.changeButtonState.bind(this));
+              }} disabled={this.state.disableButton}>
+              Button
+            </button>
         </div>
         <div className="custom-file">
           <input id="file-input" type="file" className="custom-file-input"

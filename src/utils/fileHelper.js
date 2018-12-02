@@ -1,3 +1,5 @@
+import { uploadFileIPFS } from "./ipfsHelper";
+
 const readFile = async (file, callback) => {
   const fr = new FileReader();
   fr.onload = function() {
@@ -7,16 +9,11 @@ const readFile = async (file, callback) => {
   fr.readAsArrayBuffer(file);
 };
 
-export const onFileUpload = (data) => {
-  const files = data.target.files;
-  //const filesToInsert = [];
+export const onFileUpload = (files, changeButtonState) => {
   for (var i = 0; i < files.length; i++) {
-    //const name = files[i].name;
+    const name = files[i].name;
     readFile(files[i], (buffer) => {
-      // this.uploadFileIPFS({
-      //   path: '/ejemplo/' + name,
-      //   content:  ipfs.types.Buffer.from(buffer)
-      // });
+      uploadFileIPFS(name, buffer, changeButtonState);
     });
   }
 };

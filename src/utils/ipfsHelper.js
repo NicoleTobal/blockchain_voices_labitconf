@@ -1,14 +1,19 @@
+import { addFile } from './apiRequest';
+
 const ipfsAPI = require('ipfs-api');
 
-export const ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'});
+const ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'});
 
-// const uploadFileIPFS = (file) => {
-//   // ipfs.files.mkdir('/ejemplo', (err) => {
-//   //   if (err) {
-//   //     console.error(err)
-//   //   }
-//     // ipfs.files.add([file])
-//     //   .then(results => console.log(results)
-//     // );
-//   // })
-// };
+export const uploadFileIPFS = (name, fileBuffer, changeButtonState) => {
+  const ipfsFile = {
+    path: '/' + name,
+    content:  ipfs.types.Buffer.from(fileBuffer)
+  };
+  ipfs.files.add([ipfsFile])
+    .then(results => {
+        addFile(name, results[0].hash).then((err) => {
+          changeButtonState();
+        });
+      }
+    );
+};
