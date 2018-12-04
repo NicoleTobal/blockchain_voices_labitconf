@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const backUrl = "http://157.230.0.83/api";
+const backUrl = "http://157.230.0.83:3007/api";
 
 export const addFile = (name, hash) => {
   return axios({
