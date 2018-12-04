@@ -2,7 +2,7 @@ import { addFile } from './apiRequest';
 
 const ipfsAPI = require('ipfs-api')
 
-const ipfs = ipfsAPI('157.230.0.83', '5001', {protocol: 'http'});
+const ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'});
 
 export const uploadFileIPFS = (name, fileBuffer, changeButtonState) => {
   const ipfsFile = {
