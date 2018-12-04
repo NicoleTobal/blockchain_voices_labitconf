@@ -1,8 +1,8 @@
 import { addFile } from './apiRequest';
 
-const ipfsClient = require('ipfs-http-client')
+const ipfsAPI = require('ipfs-api')
 
-const ipfs = ipfsClient('/ip4/127.0.0.1/tcp/5001')
+const ipfs = ipfsAPI('157.230.0.83', '5001', {protocol: 'http'});
 
 export const uploadFileIPFS = (name, fileBuffer, changeButtonState) => {
   const ipfsFile = {
