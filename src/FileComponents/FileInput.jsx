@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { onFileUpload } from '../utils/fileHelper';
-import loading from './loading.gif';
 import ReactLoading from 'react-loading';
 
 //import { onFileUpload } from '../utils/fileHelper';
