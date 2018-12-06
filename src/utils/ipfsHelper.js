@@ -9,12 +9,14 @@ export const uploadFileIPFS = (name, fileBuffer, changeButtonState) => {
     path: '/' + name,
     content:  ipfs.types.Buffer.from(fileBuffer)
   };
-  ipfs.files.add([ipfsFile])
-    .then(results => {
-        addFile(name, results[0].hash).then((err) => {
-          changeButtonState();
-        });
-      }
+  return ipfs.files.add([ipfsFile])
+    .then(results => 
+      addFile(name, results[0].hash).then((err) => {
+        if (err) {
+          throw err;
+        }
+        changeButtonState();
+      })
     );
 };
 

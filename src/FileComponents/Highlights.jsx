@@ -6,11 +6,11 @@ class Highlights extends Component {
   render() {
     return (
       <div>
-        <div className="container-fluid">
+        {/* <div className="container-fluid">
           <div className="row" id="title-highlights">
             <h1>Highlights</h1>
           </div>
-        </div>
+        </div> */}
 
 
         <div className="container-fluid container-highlights">

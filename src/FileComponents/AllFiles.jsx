@@ -48,11 +48,11 @@ class AllFiles extends Component {
   render() {
     return (
       <div>
-        <div className="container-fluid">
+        {/* <div className="container-fluid">
           <div className="row" id="categories-highlights">
             <h1>Blockchain</h1>
           </div>
-        </div>
+        </div> */}
         {this.renderVideos()}
       </div>
     );
