@@ -12,8 +12,8 @@ const readFile = async (file, callback) => {
 export const onFileUpload = (files, changeButtonState) => {
   for (var i = 0; i < files.length; i++) {
     const name = files[i].name;
-    readFile(files[i], (buffer) => {
-      uploadFileIPFS(name, buffer, changeButtonState);
-    });
+    readFile(files[i], (buffer) =>
+      uploadFileIPFS(name, buffer, changeButtonState)
+    );
   }
 };

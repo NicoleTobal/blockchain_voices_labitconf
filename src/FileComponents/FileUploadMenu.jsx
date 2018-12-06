@@ -33,8 +33,8 @@ class FileUploadMenu extends Component {
           </div>
         </div>
 
-        <div className="col-md-12 floating" id="img-landing"><img src="img/video-camera-2.svg"/>
-        </div>
+        {/* <div className="col-md-12 floating" id="img-landing"><img src="img/video-camera-2.svg"/>
+        </div> */}
 
       </div>
     );

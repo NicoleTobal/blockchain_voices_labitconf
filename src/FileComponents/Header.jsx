@@ -37,9 +37,9 @@ class Header extends Component {
     if (this.isNotAdmin()) {
       return (
         <li className="nav-item dropdown ml-auto">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Login
-          </a>
+          <button className="btn bmd-btn-fab dropdown-toggle person icon-1" type="button" id="ex4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i className="material-icons icon">person</i>
+          </button>
           <div className="dropdown-menu dropdown-menu-right text-center">
               <div className="form-group">
                 <label>Email address</label>
@@ -81,8 +81,10 @@ class Header extends Component {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav w-100">
             <li className="nav-item active">
-              <NavLink to="/" className="nav-link"> 
-                Home <span className="sr-only">(current)</span>
+              <NavLink to="/" className="nav-link">
+                <button className="btn bmd-btn-fab dropdown-toggle person" type="button" id="ex4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i className="material-icons">home</i>
+                </button>
               </NavLink>
             </li>
             {
