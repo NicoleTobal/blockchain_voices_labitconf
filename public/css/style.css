@@ -50,7 +50,7 @@ body {
     width: 100%;
     height: 60px;
     color: white;
-    background: #ffc246;
+    background: #ffac42;
 }
 
 .dropdown-menu {
@@ -68,6 +68,10 @@ body {
 a {
     font-family: 'Lato-regular', sans-serif;
     color: black;
+}
+
+li a {
+    cursor: ns-resize;
 }
 
 a.nav-link {
@@ -92,6 +96,16 @@ a:active {
 
 .login {
     margin-right: 25px;
+}
+
+.icon-1 {
+    margin-top: 9px;
+}
+
+.person {
+    width: 3rem!important;
+    min-width: 3.0rem!important;
+    height: 3rem!important;
 }
 
 
@@ -131,7 +145,7 @@ form.form-inline {
 
 #inputGroupFileAddon03 {
     border: none;
-    background-color: #f44336;
+    background-color: #FF981A;
     color: white;
     height: 37px;
 }
@@ -141,6 +155,13 @@ form.form-inline {
     background-color: #F57C00;
     color: white;
     height: 37px;
+    border: none;
+}
+
+button:active {
+    outline: none;
+    border: none;
+    outline: 0;
 }
 
 #custom-file-label {
@@ -163,20 +184,21 @@ form.form-inline {
 #title-landing {
     font-family: Anton-Regular;
     font-size: 50px;
-    color: #F57C00;
-    letter-spacing: 3.33px;
+    color: #ff9800;
+    letter-spacing: 4.33px;
     text-align: left;
     line-height: 60px;
     margin-top: 200px
 }
 
 #text-landing p {
+    margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     font-family: Lato-Regular;
     font-size: 14px;
-    color: #402400;
+    color: #ba4c00;
     letter-spacing: 3.33px;
     text-align: center;
     width: 800px;
@@ -235,7 +257,7 @@ label h3 {
 h1 {
     text-align: center;
     text-transform: capitalize;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'Anton', sans-serif;
 }
 
@@ -287,13 +309,13 @@ h1 {
 }
 
 #title-highlights h1 {
-    color: #F57C00;
+    color: #FF981A;
     font-size: 18px;
 }
 
 #categories-highlights h1 {
     margin-top: 4px;
-    color: #F57C00;
+    color: #FF981A;
     font-size: 18px;
     margin-left: 10px;
 }
@@ -332,6 +354,10 @@ h1 {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 }
 
+.margin-1 p {
+    margin-top: 25px;
+}
+
 @media only screen and (max-width: 1024px) {
     margin-left: 1.1%;
     margin-right: 1.1%;
@@ -354,6 +380,63 @@ h1 {
 
 #footer {
     width: 100%;
-    height: 50px;
-    background-color: #ffc246;
+    height: 100%;
+    background-color: #FFAC42;
+}
+
+.about {
+    margin-top: 55px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 29px;
+}
+
+.about-text {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 3.11px;
+    text-align: center;
+}
+
+.tama-about p {
+    width: 500px;
+}
+
+.logo-1 img {
+    width: 240px;
+    margin-left: -50px;
+}
+
+.logo-2 img {
+    width: 70px;
+    margin-left: 20px;
+}
+
+.logo-3 img {
+    margin-top: 10px;
+    width: 55px;
+    margin-left: 20px;
+}
+
+.logo-4 img {
+    width: 70px;
+    margin-left: 30px;
+}
+
+.logo-5 img {
+    width: 50px;
+}
+
+.logos ul li {
+    text-align: center;
+    padding: 70px;
+    display: inline-block;
+    list-style: none;
+}
+
+.successfull-upload-message {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #51585e;
 }

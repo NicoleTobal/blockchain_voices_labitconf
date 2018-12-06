@@ -39,7 +39,7 @@ class FileInput extends Component {
                 this.changeButtonState();
                 onFileUpload(this.state.files, this.finishUpload.bind(this));
               }} disabled={this.state.disableButton}>
-              Button
+              Upload
             </button>
         </div>
         <div className="custom-file">
@@ -54,7 +54,7 @@ class FileInput extends Component {
           </label>
         </div>
         <div>
-          <p>
+          <p className="successfull-upload-message">
             { this.state.showSuccessMessage ?
             'Your video was successfully uploaded! It will remain pending of approval' : ''
             }
