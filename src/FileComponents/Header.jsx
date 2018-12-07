@@ -82,7 +82,7 @@ class Header extends Component {
           <ul className="navbar-nav w-100">
             <li className="nav-item active">
               <NavLink to="/" className="nav-link">
-                <button className="btn bmd-btn-fab dropdown-toggle person" type="button" id="ex4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button className="btn bmd-btn-fab dropdown-toggle person" type="button" >
                   <i className="material-icons">home</i>
                 </button>
               </NavLink>
