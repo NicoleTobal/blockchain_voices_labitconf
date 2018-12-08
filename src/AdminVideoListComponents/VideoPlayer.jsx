@@ -57,8 +57,9 @@ class VideoPlayer extends Component {
             <a onClick={this.closeModal}>close</a>
           </div>
           <div>
-            <iframe width="420" height="315"
-              src={"https://gateway.ipfs.io/ipfs/" + this.props.hash} />
+            <video style={{padding: '5px'}} width="540" height="310" controls controlsList="nodownload">
+              <source src={"https://gateway.ipfs.io/ipfs/" + this.props.hash} type="video/mp4" />
+            </video>
           </div>
         </Modal>
       </div>

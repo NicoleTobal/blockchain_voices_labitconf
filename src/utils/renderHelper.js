@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { approveVideo, rejectVideo, deleteVideo } from './apiRequestHelper';
 
 export const renderApprovedFile = (video) => {
-  return <iframe src={"https://gateway.ipfs.io/ipfs/" + video.hash}/>;
+  return (
+    <video style={{padding: '5px'}} width="540" height="310" controls controlsList="nodownload">
+      <source src={"https://gateway.ipfs.io/ipfs/" + video.hash} type="video/mp4" />
+    </video>
+  );
 };
 
 export const renderActionButtons = (status, video) => {
